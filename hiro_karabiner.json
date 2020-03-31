@@ -1,0 +1,145 @@
+{
+  "title": "hiro settings",
+  "rules": [
+    {
+      "description": "Swap Command+Tab and Control+Tab",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": "command"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": "control"
+            }
+          ]
+        }
+      ]
+    },
+{
+  "description": "JISキーボードの'変換キー'と'ひらがなキー'を'かなキー'に、'無変換キー'を'英数キー'に変換。",
+  "manipulators": [
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "international2",
+        "modifiers": {
+          "optional": [ "any" ]
+        }
+      },
+      "to": [
+        { "key_code": "international2" }
+      ],
+      "to_if_alone": [
+        { "key_code": "japanese_kana" }
+      ]
+    },
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "international4",
+        "modifiers": {
+          "optional": [ "any" ]
+        }
+      },
+      "to": [
+        { "key_code": "international4" }
+      ],
+      "to_if_alone": [
+        { "key_code": "japanese_kana" }
+      ]
+    },
+    {
+      "type": "basic",
+      "from": {
+        "key_code": "international5",
+        "modifiers": {
+          "optional": [ "any" ]
+        }
+      },
+      "to": [
+        { "key_code": "international5" }
+      ],
+      "to_if_alone": [
+        { "key_code": "japanese_eisuu" }
+      ]
+    }
+  ]
+},
+    {
+      "description": "Swap Command+Delete and Control+Delete",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "delete_or_backspace",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": "command"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "delete_or_backspace",
+            "modifiers": {
+              "mandatory": [
+                "left_command"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": "control"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

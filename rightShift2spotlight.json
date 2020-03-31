@@ -1,0 +1,21 @@
+{
+  "title": "rightShift2spotlight",
+  "rules": [
+    {
+      "description": "rightShift2spotlight",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_command"
+          },
+          "to_if_alone": [
+            { 
+              "key_code": "a"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
